@@ -17,7 +17,7 @@ public class  backQ
         }
 
         //right diagonal up 
-        for(int i=row-1,j=col+1;i>=0 && j<=board.length;i--,j++)
+        for(int i=row-1,j=col+1;i>=0 && j<board.length;i--,j++)
         {
             if(board[i][j]=='Q')
             return false;
@@ -45,7 +45,7 @@ public class  backQ
     
 }
  public static void printboard(char board[][])
- {
+ { System.out.println("-------chess board -------");
     for(int i =0;i<board.length;i++)
     {
         for(int j=0;j<board.length;j++)
@@ -63,10 +63,10 @@ public class  backQ
     {
         for(int j =0;j<n;j++)
         {
-            board[i][j] = '.';
+            board[i][j] = 'x';
         }
     }
-
+   nqueens(board, 0);
  }
 }
 

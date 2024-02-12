@@ -49,16 +49,17 @@ public class divide_conquer {
             }
     }
     public static void quicksort(int [] arr,int si,int ei){
+    if(si<ei)   
+    { 
     int pidx = partition(arr,si,ei);
     quicksort(arr, si, pidx-1);
-    quicksort(arr, pidx+1, ei);
-
+    quicksort(arr, pidx+1, ei);}
     }
     public static int partition(int []arr,int si,int ei){
         int pivot = arr[ei];
         int i =si-1;
         int temp;
-        for(int j =0;j<arr.length;j++)
+        for(int j =si;j<ei;j++)
         {
         if(arr[j]<=pivot){
         i++;
@@ -73,6 +74,8 @@ public class divide_conquer {
     arr[i]=temp;
     return i;
     }
+
+    //search in sorted and rotated array 
     public static int search(int []arr,int si,int ei,int tar){
         if(si>ei){
             return -2;

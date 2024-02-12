@@ -11,7 +11,7 @@ public class string_subset {
     }
     public static void main(String args[])
     {
-        String str ="abc";
+        String str ="abcd";
         sub(str,"",0);
     }
 }

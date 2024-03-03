@@ -1,4 +1,4 @@
-package matrix;
+
 
 public class Majority_element {
     

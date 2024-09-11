@@ -14,8 +14,11 @@ public class divide_conquer {
     {   if(si>=ei)
         return;
         int mid = si +(ei-si)/2;
+        System.out.println("left subpart");
         mergesort(arr, 0, mid);
+        System.out.println("right subpart");
         mergesort(arr, mid+1, ei);
+        System.out.println("merging");
         merge( arr, si , ei, mid);
     }
     public static void merge(int []arr,int si,int ei,int mid){
@@ -104,9 +107,9 @@ public class divide_conquer {
     
     public static void main(String args[]){
         int [] arr = {6,3,2,7,1,9};
-        //mergesort(arr, 0, arr.length-1);
+        mergesort(arr, 0, arr.length-1);
         //quicksort(arr, 0, arr.length-1);
-        int a = search(arr, 0, arr.length-1, 1);
-        System.out.println(a);
+        // int a = search(arr, 0, arr.length-1, 1);
+        // System.out.println(a);
     }
 }
